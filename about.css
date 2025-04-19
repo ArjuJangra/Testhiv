@@ -1,0 +1,165 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #aecbff;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff7eb3;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background: #ff7eb3;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.container {
+    display: flex;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 90%;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h1 {
+    color: #ff7eb3;
+    font-size: 28px;
+}
+
+.about-text p {
+    color: #555;
+    margin: 15px 0;
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about-list li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.learn-more-btn {
+    background: #ff7eb3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.illustration {
+    flex: 1;
+}
+
+.illustration img {
+    max-width: 100%;
+}
+
+/* Why Choose Us */
+.why-choose {
+    background: #ecf0f1;
+    padding: 50px 20px;
+}
+
+.features {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Section */
+.team {
+    padding: 50px 20px;
+}
+
+.team-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+.team-member img {
+    width: 100px;  /* Adjust size as needed */
+    height: 100px; /* Ensures uniform circular shape */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits properly without distortion */
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+}

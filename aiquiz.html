@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Generated Quiz - TESTHIVE</title>
+    <link rel="stylesheet" href="aiquiz.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar for Already Created Quizzes -->
+        <div class="sidebar">
+            <h2>📜 Created Quizzes</h2>
+            <ul id="quiz-list"></ul>
+        </div>
+
+        <!-- Main Content for AI Quiz Generation -->
+        <div class="main-content">
+            <h1>🤖 Generate Quiz with AI</h1>
+
+            <label for="quiz-topic">Quiz Topic:</label>
+            <input type="text" id="quiz-topic" placeholder="Enter quiz topic">
+
+            <label for="num-questions">Number of Questions:</label>
+            <input type="number" id="num-questions" min="1" max="20" placeholder="Enter number">
+
+            <button onclick="generateQuiz()">⚡ Generate Quiz</button>
+
+            <div id="quiz-container"></div>
+
+            <button onclick="saveQuiz()" id="save-btn" style="display: none;">💾 Save Quiz</button>
+        </div>
+    </div>
+
+    <script src="aiquiz.js"></script>
+</body>
+</html>

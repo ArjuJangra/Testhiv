@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - TESTHIVE</title>
+    <link rel="stylesheet" href="studentdashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="logo">TESTHIVE</h2>
+            <ul>
+                <li><a href="#">📜 Attempted Quizzes</a></li>
+                <li><a href="#">📊 Performance</a></li>
+                <li><a href="#">🎯 Recommended Quizzes</a></li>
+                <li><a href="#">🏆 Leaderboard</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+                <li><a href="#" class="logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="dashboard-header">
+                <h2>Welcome, <span id="student-name">John Doe</span></h2>
+                <p>Class/Branch: <span id="student-class">Computer Science</span></p>
+            </header>
+
+            <section class="stats-container">
+                <div class="stat-card">
+                    <h3>📜 Quizzes Attempted</h3>
+                    <p id="quiz-attempts">12</p>
+                </div>
+                <div class="stat-card">
+                    <h3>📊 Accuracy</h3>
+                    <p id="accuracy">85%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>🏆 Rank</h3>
+                    <p id="rank">#5</p>
+                </div>
+                <div class="stat-card">
+                    <h3>🔥 Daily Streak</h3>
+                    <p id="streak">7 Days</p>
+                </div>
+            </section>
+
+            <!-- Quiz Creation Section -->
+            <section class="quiz-creation">
+                <h2>📝 Create a New Quiz</h2>
+                <form id="quiz-form">
+                    <input type="text" id="quiz-title" placeholder="Quiz Title" required>
+                    <select id="quiz-difficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                    <button type="submit">Create Quiz</button>
+                </form>
+            </section>
+
+            <!-- Already Created Quizzes -->
+            <section class="created-quizzes">
+                <h2>📂 Already Created Quizzes</h2>
+                <div class="quiz-list" id="created-quizzes-list">
+                    <!-- Quizzes will be added dynamically -->
+                </div>
+            </section>
+
+            <!-- Recommended Quizzes -->
+            <section class="recommended-quizzes">
+                <h2>🎯 Recommended Quizzes</h2>
+                <div class="quiz-list">
+                    <div class="quiz">
+                        <h4>Data Structures</h4>
+                        <button onclick="attemptQuiz('Data Structures')">Attempt Now</button>
+                    </div>
+                    <div class="quiz">
+                        <h4>Operating Systems</h4>
+                        <button onclick="attemptQuiz('Operating Systems')">Attempt Now</button>
+                    </div>
+                    <div class="quiz">
+                        <h4>Machine Learning Basics</h4>
+                        <button onclick="attemptQuiz('Machine Learning Basics')">Attempt Now</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="studentdashboard.js"></script>
+</body>
+</html>

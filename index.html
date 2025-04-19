@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTHIVE Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2 class="brand-logo">TESTHIVE</h2>
+            <h2 class="welcome-text">Welcome</h2>
+            <form id="login-form">
+                <div class="role-selection">
+                    <label>
+                        <input type="radio" name="role" value="teacher" required onchange="updateLoginButton()"> Teacher
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="student" required onchange="updateLoginButton()"> Student
+                    </label>
+                </div>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <button id="role-login-btn" class="role-login hidden" onclick="redirectToLogin()" type="button"></button>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="illustration.jpg" alt="Login Illustration">
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <button class="signup-btn" onclick="redirectToSignup()">Sign Up</button>  <!-- Sign Up Button -->
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>

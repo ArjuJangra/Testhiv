@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Quiz Creation - TESTHIVE</title>
+    <link rel="stylesheet" href="manualquiz.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar for Existing Quizzes -->
+        <div class="sidebar">                                                                                                                                                                                                                                                                                                       
+            <h2>📜 Created Quizzes</h2>
+            <ul id="quiz-list"></ul>
+        </div>
+
+        <!-- Main Content for Quiz Creation -->
+        <div class="main-content">
+            <h1>✍️ Create a New Quiz</h1>
+
+            <label for="quiz-title">Quiz Title:</label>
+            <input type="text" id="quiz-title" placeholder="Enter quiz title">
+
+            <div id="questions-container"></div>
+
+            <button onclick="addQuestion()">➕ Add Question</button>
+            <button onclick="saveQuiz()">💾 Save Quiz</button>
+        </div>
+    </div>
+
+    <script src="manualquiz.js"></script>
+</body>
+</html>

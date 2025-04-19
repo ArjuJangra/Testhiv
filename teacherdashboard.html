@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - TESTHIVE</title>
+    <link rel="stylesheet" href="teacherdashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="logo">TESTHIVE</h2>
+            <ul>
+                <li><a href="#">📜 Created Quizzes</a></li>
+                <li><a href="#">📊 Quiz Performance</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+                <li><a href="#" class="logout">🚪 Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Header -->
+            <header class="dashboard-header">
+                <h2>Welcome, <span id="teacher-name">Prof. Smith</span></h2>
+                <p>Department: <span id="teacher-department">Computer Science</span></p>
+            </header>
+
+            <!-- Quiz Creation Section -->
+            <section class="quiz-creation">
+                <h2>📝 Create a New Quiz</h2>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="createQuiz('ai')">
+                        🤖 AI-Generated Quiz
+                    </div>
+                    <div class="quiz-option" onclick="createQuiz('manual')">
+                        ✍️ Manually Created Quiz
+                    </div>
+                </div>
+            </section>
+
+            <!-- Created Quizzes Section -->
+            <section class="created-quizzes">
+                <h2>📜 Created Quizzes</h2>
+                <div id="created-quizzes-list">
+                    <!-- Quizzes will be added dynamically -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="teacherdashboard.js"></script>
+</body>
+</html>

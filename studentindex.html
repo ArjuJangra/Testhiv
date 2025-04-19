@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - TESTHIVE</title>
+    <link rel="stylesheet" href="studentstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2 class="brand-logo">TESTHIVE</h2>
+            <h2 class="welcome-text">Student Registration</h2>
+            <form id="student-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+                <label for="photo">Upload Your Photo</label>
+                <input type="file" id="photo" accept="image/*" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm password" required>
+
+                <label>Education Level</label>
+                <select id="education" onchange="toggleEducationOptions()">
+                    <option value="">Select Education Level</option>
+                    <option value="school">School</option>
+                    <option value="college">College</option>
+                </select>
+
+                <div id="school-options" class="hidden">
+                    <label for="standard">Select Standard</label>
+                    <select id="standard">
+                        <option value="6th">6th</option>
+                        <option value="7th">7th</option>
+                        <option value="8th">8th</option>
+                        <option value="9th">9th</option>
+                        <option value="10th">10th</option>
+                        <option value="11th">11th</option>
+                        <option value="12th">12th</option>
+                    </select>
+                </div>
+
+                <div id="college-options" class="hidden">
+                    <label>Choose Degree</label>
+                    <select id="degree" onchange="toggleDegreeOptions()">
+                        <option value="graduation">Graduation</option>
+                        <option value="post-graduation">Post Graduation</option>
+                    </select>
+
+                    <div id="graduation-options" class="hidden">
+                        <label for="grad-course">Select Graduation Course</label>
+                        <select id="grad-course">
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="B.Sc">B.Sc</option>
+                            <option value="B.Com">B.Com</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BA">BA</option>
+                        </select>
+                    </div>
+
+                    <div id="post-grad-options" class="hidden">
+                        <label for="pg-course">Select Post-Graduation Course</label>
+                        <select id="pg-course">
+                            <option value="M.Tech">M.Tech</option>
+                            <option value="M.Sc">M.Sc</option>
+                            <option value="M.Com">M.Com</option>
+                            <option value="MBA">MBA</option>
+                            <option value="MA">MA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="studentscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - TESTHIVE</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2 class="brand-logo">TESTHIVE</h2>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>TESTHIVE Portfolio</h1>
+        <p>Your AI-powered quiz platform for interactive learning</p>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose TESTHIVE?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>📚 AI-Generated Quizzes</h3>
+                <p>Generate quizzes effortlessly using AI-powered question generation.</p>
+            </div>
+            <div class="feature">
+                <h3>📝 Manual Quiz Creation</h3>
+                <p>Teachers can manually design quizzes with custom questions and answers.</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Performance Analytics</h3>
+                <p>Track student progress with detailed analytics and leaderboard rankings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"TESTHIVE has completely transformed how I assess my students!"</p>
+                <h4>- Sarah, Teacher</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The AI-generated quizzes help me prepare for exams faster!"</p>
+                <h4>- Alex, Student</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-response"></p>
+    </section>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

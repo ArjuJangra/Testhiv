@@ -1,10 +1,11 @@
+// Update the login button text based on selected role (student or teacher)
 function updateLoginButton() {
-    let selectedRole = document.querySelector('input[name="role"]:checked');
-    let loginButton = document.getElementById("role-login-btn");
+    const selectedRole = document.querySelector('input[name="role"]:checked');
+    const loginButton = document.getElementById("role-login-btn");
 
     if (!selectedRole) return;
 
-    let role = selectedRole.value;
+    const role = selectedRole.value;
 
     if (role === "student") {
         loginButton.innerText = "Go to Student Sign-Up";
@@ -17,64 +18,47 @@ function updateLoginButton() {
     loginButton.classList.remove("hidden"); // Show the button after selection
 }
 
+// Redirect to the respective sign-up or login page based on role
 function redirectToLogin() {
-    let loginButton = document.getElementById("role-login-btn");
-    let link = loginButton.getAttribute("data-link");
+    const loginButton = document.getElementById("role-login-btn");
+    const link = loginButton.getAttribute("data-link");
 
     if (link) {
         window.location.href = link; // Redirect to the respective login page
     }
 }
 
+// Handle the form submission (login process)
 document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submission
 
-    let role = document.querySelector('input[name="role"]:checked');
+    const role = document.querySelector('input[name="role"]:checked');
 
     if (!role) {
         alert("Please select a role before logging in.");
         return;
     }
 
-    role = role.value;
+    const roleValue = role.value;
     
-    alert(`Welcome to TESTHIVE! You are logging in as a ${role}.`);
+    alert(`Welcome to TESTHIVE! You are logging in as a ${roleValue}.`);
 
-    // Redirect to respective dashboard
-    let dashboardPage = role === "student" ? "studentindex.html" : "teacherindex.html";
+    // Redirect to respective dashboard based on the role (student or teacher)
+    const dashboardPage = roleValue === "student" ? "studentdashboard.html" : "teacherdashboard.html";
     window.location.href = dashboardPage;
 });
 
+// Redirect to the correct sign-up page (student or teacher) based on selected role
 function redirectToSignup() {
-    let selectedRole = document.querySelector('input[name="role"]:checked');
+    const selectedRole = document.querySelector('input[name="role"]:checked');
 
     if (!selectedRole) {
         alert("Please select a role first.");
         return;
     }
 
-    let role = selectedRole.value;
-    let signupPage = role === "student" ? "studentindex.html" : "teachersignup.html";
+    const role = selectedRole.value;
+    const signupPage = role === "student" ? "studentsignup.html" : "teachersignup.html";
 
-    window.location.href = signupPage; // Redirects to respective signup page
+    window.location.href = signupPage; // Redirects to the respective signup page
 }
-document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-
-    let role = document.querySelector('input[name="role"]:checked');
-
-    if (!role) {
-        alert("Please select a role before logging in.");
-        return;
-    }
-
-    role = role.value;
-    
-    alert(`Welcome to TESTHIVE! You are logging in as a ${role}.`);
-
-    // ✅ Redirect to respective dashboard
-    let dashboardPage = role === "student" ? "studentdashborad.html" : "teacherdashboard.html";
-    window.location.href = dashboardPage;
-    
-});
-

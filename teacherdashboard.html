@@ -16,7 +16,7 @@
                 <li><a href="#">📜 Created Quizzes</a></li>
                 <li><a href="#">📊 Quiz Performance</a></li>
                 <li><a href="#">⚙️ Settings</a></li>
-                <li><a href="#" class="logout">🚪 Logout</a></li>
+                <li><a href="#" class="logout" onclick="logout()">🚪 Logout</a></li>
             </ul>
         </div>
 
@@ -29,17 +29,18 @@
             </header>
 
             <!-- Quiz Creation Section -->
-            <section class="quiz-creation">
-                <h2>📝 Create a New Quiz</h2>
-                <div class="quiz-options">
-                    <div class="quiz-option" onclick="createQuiz('ai')">
-                        🤖 AI-Generated Quiz
-                    </div>
-                    <div class="quiz-option" onclick="createQuiz('manual')">
-                        ✍️ Manually Created Quiz
-                    </div>
-                </div>
-            </section>
+<section class="quiz-creation">
+    <h2>📝 Create a New Quiz</h2>
+    <div class="quiz-options">
+        <button class="quiz-option" onclick="window.location.href='aiquiz.html'">
+            🤖 AI-Generated Quiz
+        </button>
+        <button class="quiz-option" onclick="window.location.href='manualquiz.html'">
+            ✍️ Manually Created Quiz
+        </button>
+    </div>
+</section>
+
 
             <!-- Created Quizzes Section -->
             <section class="created-quizzes">

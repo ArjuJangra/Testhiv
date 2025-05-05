@@ -7,18 +7,19 @@ function updateLoginButton() {
 
     const role = selectedRole.value;
 
+    // Update button text and link based on selected role
     if (role === "student") {
         loginButton.innerText = "Go to Student Sign-Up";
-        loginButton.setAttribute("data-link", "studentindex.html"); // Set student login link
+        loginButton.setAttribute("data-link", "studentsignup.html"); // Set student sign-up link
     } else if (role === "teacher") {
         loginButton.innerText = "Go to Teacher Sign-Up";
-        loginButton.setAttribute("data-link", "teacherindex.html"); // Set teacher login link
+        loginButton.setAttribute("data-link", "teachersignup.html"); // Set teacher sign-up link
     }
 
-    loginButton.classList.remove("hidden"); // Show the button after selection
+    loginButton.classList.remove("hidden"); // Show the button after role selection
 }
 
-// Redirect to the respective sign-up or login page based on role
+// Redirect to the respective sign-up or login page based on the selected role
 function redirectToLogin() {
     const loginButton = document.getElementById("role-login-btn");
     const link = loginButton.getAttribute("data-link");
@@ -28,9 +29,9 @@ function redirectToLogin() {
     }
 }
 
-// Handle the form submission (login process)
+// Handle the login form submission (login process)
 document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevent the default form submission
 
     const role = document.querySelector('input[name="role"]:checked');
 
@@ -40,10 +41,10 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     }
 
     const roleValue = role.value;
-    
+
     alert(`Welcome to TESTHIVE! You are logging in as a ${roleValue}.`);
 
-    // Redirect to respective dashboard based on the role (student or teacher)
+    // Redirect to the respective dashboard based on the selected role (student or teacher)
     const dashboardPage = roleValue === "student" ? "studentdashboard.html" : "teacherdashboard.html";
     window.location.href = dashboardPage;
 });
@@ -60,5 +61,5 @@ function redirectToSignup() {
     const role = selectedRole.value;
     const signupPage = role === "student" ? "studentsignup.html" : "teachersignup.html";
 
-    window.location.href = signupPage; // Redirects to the respective signup page
+    window.location.href = signupPage; // Redirect to the respective sign-up page
 }
